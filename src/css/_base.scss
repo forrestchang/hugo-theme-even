@@ -16,7 +16,6 @@ body {
   color: $global-font-color;
   background: $global-background;
   scroll-behavior: smooth;
-  border-top: 3px solid $theme-color;
 }
 
 @include max-screen() {
