@@ -39,15 +39,13 @@
   }
 
   a {
+    // @include underline-from-center-for-link;
     color: $link-color;
-    word-break: break-all;
+    // word-break: break-all;
+    margin: 0 3px;
 
     &:hover {
-      border-bottom: $content-link-border;
-    }
-
-    &.fancybox {
-      border: 0;
+      border-bottom: 2px solid $link-color;
     }
   }
 

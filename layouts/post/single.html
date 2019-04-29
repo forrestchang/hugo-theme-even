@@ -13,6 +13,7 @@
             {{ end -}}
           </div>
         {{- end }}
+        <span class="more-meta">{{ if .Params.author }}{{ .Params.author | safeHTML }}{{ else }}{{ .Site.Author.name | safeHTML }}{{ end }}</span>
         {{- if .Site.Params.moreMeta }}
           <span class="more-meta"> {{ T "wordCount" .WordCount }} </span>
           <span class="more-meta"> {{ T "readingTime" .ReadingTime }} </span>

@@ -180,7 +180,7 @@ $toc-max-sreen-width: 2 * $post-toc-width + $post-toc-margin-left !default;
 $content-headings-anchor: "" !default;
 
 // Border bottom of the link when hover it.
-$content-link-border: 1px solid $link-color !default;
+$content-link-border: 2px solid $link-color !default;
 
 // Background color of the blockquote.
 $content-blockquote-backgroud: rgba($theme-color, 0.05) !default;

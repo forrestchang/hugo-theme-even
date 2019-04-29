@@ -12,11 +12,15 @@
 
     a {
       margin-right: 5px;
-      color: $theme-color;
+      color: $link-color;
       word-break: break-all;
 
       &::before {
         content: '#';
+      }
+
+      &:hover {
+        border-bottom: 2px solid $link-color;
       }
     }
   }
