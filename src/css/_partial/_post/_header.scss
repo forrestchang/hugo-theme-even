@@ -6,7 +6,6 @@
     font-size: $post-title-font-size;
     font-weight: $post-title-font-weight;
     font-family: $global-serif-font-family;
-    text-align: center;
   }
 
   .post-link {
@@ -14,10 +13,10 @@
   }
 
   .post-meta {
-    text-align: center;
     font-size: 0.9em;
     font-family: $global-serif-font-family;
     color: $post-meta-font-color;
+    margin-top: 10px;
 
     .post-category {
       display: inline;
@@ -38,6 +37,14 @@
     .more-meta {
       &::before {
         content: '·';
+      }
+
+      a {
+        color: $link-color;
+
+        &:hover {
+          border-bottom: 2px solid $link-color;
+        }
       }
     }
 

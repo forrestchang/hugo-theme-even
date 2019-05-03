@@ -5,7 +5,7 @@
       <h1 class="post-title">{{ .Title }}</h1>
 
       <div class="post-meta">
-        <span class="post-time"> {{ .Date.Format (.Site.Params.dateFormatToUse | default "2006-01-02") }} </span>
+        <span class="post-time">Posted on <a href="{{ .Params.baseUrl }}">{{ .Date.Format (.Site.Params.dateFormatToUse | default "2006-01-02") }}</a></a> </span>
         {{ with .Params.categories -}}
           <div class="post-category">
             {{ range . -}}
@@ -13,7 +13,6 @@
             {{ end -}}
           </div>
         {{- end }}
-        <span class="more-meta">{{ if .Params.author }}{{ .Params.author | safeHTML }}{{ else }}{{ .Site.Author.name | safeHTML }}{{ end }}</span>
         {{- if .Site.Params.moreMeta }}
           <span class="more-meta"> {{ T "wordCount" .WordCount }} </span>
           <span class="more-meta"> {{ T "readingTime" .ReadingTime }} </span>
@@ -22,6 +21,16 @@
           {{ $valueSpan := printf `<span id="busuanzi_value_page_pv"><img src="%s" alt="spinner.svg"/></span>` ("img/spinner.svg" | relURL) -}}
           <span id="busuanzi_container_page_pv" class="more-meta"> {{ printf (T "pagePV") $valueSpan | safeHTML }} </span>
         {{- end }}
+        <span class="more-meta">
+          Written by
+          <a href="{{ .Params.baseUrl }}">
+          {{ if .Params.author }}
+            {{ .Params.author | safeHTML }}
+          {{ else }}
+            {{ .Site.Author.name | safeHTML }}
+          {{ end }}
+          </a>
+        </span>
       </div>
     </header>
 
