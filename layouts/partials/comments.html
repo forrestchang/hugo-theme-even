@@ -17,6 +17,20 @@
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   {{- end -}}
 
+   <!-- utteranc -->
+   {{ if .Site.Params.utterance.enable }}
+   <div class="post bg-white">
+     <script src="https://utteranc.es/client.js"
+           repo= "{{ .Site.Params.utterance.repo }}"
+           issue-term="{{ .Site.Params.utterance.issueTerm }}"
+           theme="{{ default "github-light" .Site.Params.utterance.theme }}"
+           label="{{ .Site.Params.utterance.label }}"
+           crossorigin="anonymous"
+           async>
+     </script>
+   </div>
+ {{ end }}
+
   <!-- changyan -->
   {{- if and .Site.Params.changyanAppid .Site.Params.changyanAppkey -}}
     <div id="SOHUCS"></div>
