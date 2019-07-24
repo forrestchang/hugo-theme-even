@@ -64,8 +64,9 @@
   }
 
   img {
-    display: inline-block;
-    max-width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 0 auto;
   }
 
   .table-wrapper {

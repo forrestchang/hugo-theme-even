@@ -16,10 +16,10 @@ theme:
   other: "Theme"
 
 siteUV:
-  other: "site uv: %s"
+  other: "Site UV: %s"
 
 sitePV:
-  other: "site pv: %s"
+  other: "Site PV: %s"
 
 pagePV:
   other: "%s times read"
