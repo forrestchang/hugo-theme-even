@@ -19,10 +19,7 @@
   <!-- Content -->
   <div class="post-content">
     <div class="post-summary">
-      {{ .Summary }} ...
-    </div>
-    <div class="read-more-link">
-      <a href="{{ .URL }}">{{ T "readMore" }}</a>
+      {{ .Summary }} <a class="read-more-link" href={{ .URL }}>{{ T "readMore" }}</a>
     </div>
     <div class="read-more">
     </div>

@@ -3,17 +3,24 @@
 // ==============================
 
 .header {
-  @include clearfix; 
-  padding: $header-padding;
+  @include clearfix;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 0px;
+  margin-bottom: 40px;
+  border-bottom: 3px solid;
 
-  @import '_header/logo';
-  @import '_header/menu';
+  @import "_header/logo";
+  @import "_header/menu";
 }
-
 
 @include max-screen() {
   .header {
-    padding: 50px 0 0;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 0px;
     text-align: center;
   }
 }
